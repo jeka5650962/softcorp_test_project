@@ -253,6 +253,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 .page .order__title {
   color: #fff;
@@ -278,6 +280,155 @@ body {
   width: 100%;
   height: 100%;
 }
+.page .order__steps {
+  margin: 0 0 144px 0;
+}
+.page .order .steps__body {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 139px;
+}
+.page .order .steps__body > div {
+  width: 100px;
+  height: 100px;
+  background-color: #3e9cdc;
+  border: 5px solid #286690;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.page .order .steps__body > div .dots {
+  position: absolute;
+  left: 110px;
+  display: flex;
+}
+.page .order .steps__body > div .dots b {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  margin: 0 20px 0 0;
+}
+.page .order .steps__body > div span {
+  text-align: center;
+  min-width: 190px;
+  font-size: 16px;
+  line-height: 118.75%;
+  color: #fff;
+  position: absolute;
+  top: 120px;
+}
+.page .order__form {
+  flex: 1 1 auto;
+}
+.page .order .form {
+  display: grid;
+  grid-template-columns: repeat(3, 370px);
+  grid-template-areas: "system email name" "line line file" "button button button";
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  justify-items: center;
+}
+.page .order .form__system {
+  grid-area: system;
+}
+.page .order .form__email {
+  grid-area: email;
+}
+.page .order .form__name {
+  grid-area: name;
+}
+.page .order .form__line {
+  grid-area: line;
+}
+.page .order .form .line {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.page .order .form .line__info {
+  display: flex;
+  justify-content: space-between;
+}
+.page .order .form .line span {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 122.2222222222%;
+  color: #fff;
+}
+.page .order .form .line__full {
+  width: 770px;
+  height: 6px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+.page .order .form .line__full b {
+  position: absolute;
+  top: -10px;
+  left: 100%;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #286690;
+  border-radius: 50%;
+  background-color: #3e9cdc;
+  cursor: pointer;
+}
+.page .order .form__file {
+  grid-area: file;
+  position: relative;
+}
+.page .order .form__file svg {
+  position: absolute;
+  top: 14px;
+  left: 97px;
+}
+.page .order .form__button {
+  grid-area: button;
+}
+.page .order .form > div > select, .page .order .form input, .page .order .form label, .page .order .form button {
+  width: 370px;
+  height: 48px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.85);
+  font-size: 18px;
+  line-height: 122.2222222222%;
+  color: #272733;
+  padding: 12px 10px;
+}
+.page .order .form > div > input[type=file] {
+  display: none;
+}
+.page .order .form > div > label {
+  display: block;
+  background-color: #fff;
+  border: 2px solid #3e9cdc;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: center;
+  padding-left: 40px;
+}
+.page .order .form > div > button {
+  background-color: #3e9cdc;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #fff;
+  text-transform: uppercase;
+}
+
 .footer {
   position: relative;
   z-index: 2;

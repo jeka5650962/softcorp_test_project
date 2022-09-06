@@ -185,6 +185,8 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
+            z-index: 2;
         }
         &__title {
             color: #fff;
@@ -210,6 +212,157 @@ body {
             width: 100%;
             height: 100%;
             img {}
+        }
+        &__steps {
+            margin: 0 0 144px 0;
+        }
+        .steps {
+            &__body {
+                position: relative;
+                z-index: 2;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: 1fr;
+                grid-column-gap: 139px;
+                & > div {
+                    width: 100px;
+                    height: 100px;
+                    background-color: #3e9cdc;
+                    border: 5px solid #286690;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    .dots {
+                        position: absolute;
+                        left: 110px;
+                        display: flex;
+                        b {
+                            display: inline-block;
+                            width: 6px;
+                            height: 6px;
+                            border-radius: 50%;
+                            background-color: #c4c4c4;
+                            margin: 0 20px 0 0;
+                        }
+                    }
+                    span {
+                        text-align: center;
+                        min-width: 190px;
+                        font-size: 16px;
+                        line-height: calc(19 / 16 * 100%);
+                        color: #fff;
+                        position: absolute;
+                        top: 120px;
+                    }
+                }
+            }
+        }
+        &__form {
+            flex: 1 1 auto;
+        }
+        .form {
+            display: grid;
+            grid-template-columns: repeat(3, 370px);
+            grid-template-areas: 'system email name' 'line line file' 'button button button';
+            grid-column-gap: 30px;
+            grid-row-gap: 30px;
+            justify-items: center;
+            &__system {
+                grid-area: system;
+            }
+            &__email {
+                grid-area: email;
+            }
+            &__name {
+                grid-area: name;
+            }
+            &__line {
+                grid-area: line;
+            }
+            .line {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                &__info {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                span {
+                    display: inline-block;
+                    font-size: 18px;
+                    line-height: calc(22 / 18 * 100%);
+                    color: #fff;
+                }
+                &__full {
+                    width: 770px;
+                    height: 6px;
+                    border: 1px solid #fff;
+                    border-radius: 3px;
+                    background-color: rgba(255, 255, 255, 0.7);
+                    position: relative;
+                    b {
+                        position: absolute;
+                        top: -10px;
+                        left: 100%;
+                        width: 24px;
+                        height: 24px;
+                        border: 3px solid #286690;
+                        border-radius: 50%;
+                        background-color: #3e9cdc;
+                        cursor: pointer;
+                    }
+                }
+            }
+            &__file {
+                grid-area: file;
+                position: relative;
+                svg {
+                    position: absolute;
+                    top: 14px;
+                    left: 97px;
+                }
+            }
+            &__button {
+                grid-area: button;
+            }
+            & > div > select, input, label, button {
+                width: 370px;
+                height: 48px;
+                border: 1px solid #fff;
+                border-radius: 3px;
+                background-color: rgba(255, 255, 255, 0.85);
+                font-size: 18px;
+                line-height: calc(22 / 18 * 100%);
+                color: #272733;
+                padding: 12px 10px;
+            }
+            & > div > input[type="text"] {}
+            & > div > input[type="file"] {
+                display: none;
+            }
+            & > div > label {
+                display: block;
+                background-color: #fff;
+                border: 2px solid #3e9cdc;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: 700;
+                line-height: calc(18 / 15 * 100%);
+                text-align: center;
+                padding-left: 40px;
+            }
+            & > div > button {
+                background-color: #3e9cdc;
+                border-radius: 4px;
+                font-size: 15px;
+                font-weight: 700;
+                line-height: calc(18 / 15 * 100%);
+                color: #fff;
+                text-transform: uppercase;
+            }
         }
     }
 }
