@@ -259,111 +259,139 @@ body {
                 }
             }
         }
+        // ---------------------------------------------------------- ФОРМА
         &__form {
             flex: 1 1 auto;
         }
         .form {
-            display: grid;
-            grid-template-columns: repeat(3, 370px);
-            grid-template-areas: 'system email name' 'line line file' 'button button button';
-            grid-column-gap: 30px;
-            grid-row-gap: 30px;
-            justify-items: center;
-            &__system {
-                grid-area: system;
-            }
-            &__email {
-                grid-area: email;
-            }
-            &__name {
-                grid-area: name;
-            }
-            &__line {
-                grid-area: line;
-            }
-            .line {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                &__info {
-                    display: flex;
-                    justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+            &__item {
+                padding: 0 15px;
+                &:not(:last-child) {
+                    margin-bottom: 30px;
                 }
-                span {
-                    display: inline-block;
+                &:nth-child(1) {
+                    flex: 0 1 33.333%;
+                }
+                &:nth-child(2) {
+                    flex: 0 1 33.333%;
+                }
+                &:nth-child(3) {
+                    flex: 0 1 33.333%;
+                }
+                &:nth-child(4) {
+                    flex: 0 1 66.666%;
+                }
+                &:nth-child(5) {
+                    flex: 0 1 33.333%;
+                }
+                &:last-child {
+                    flex: 0 1 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+                input[type="text"], select {
+                    width: 370px;
+                    height: 48px;
+                    background-color: rgba(255, 255, 255, 0.85);
+                    border: 1px solid #fff;
+                    border-radius: 3px;
+                    padding: 12px 10px;
+                    font-size: 18px;
+                    line-height: calc(22 / 18 * 100%);
+                    color: #272733;
+                }
+            }
+            &__range {}
+            .range {
+                display: flex;
+                flex-wrap: wrap;
+                &__description {
+                    flex: 0 1 50%;
                     font-size: 18px;
                     line-height: calc(22 / 18 * 100%);
                     color: #fff;
                 }
-                &__full {
-                    width: 770px;
-                    height: 6px;
-                    border: 1px solid #fff;
-                    border-radius: 3px;
-                    background-color: rgba(255, 255, 255, 0.7);
-                    position: relative;
-                    b {
-                        position: absolute;
-                        top: -10px;
-                        left: 100%;
-                        width: 24px;
-                        height: 24px;
-                        border: 3px solid #286690;
-                        border-radius: 50%;
-                        background-color: #3e9cdc;
-                        cursor: pointer;
+                &__value {
+                    flex: 0 1 50%;
+                    display: flex;
+                    justify-content: flex-end;
+                    font-size: 18px;
+                    line-height: calc(22 / 18 * 100%);
+                    font-weight: 700;
+                    color: rgba(255, 255, 255, 0.85);
+                }
+                &__line {
+                    flex: 0 1 100%;
+                    margin-top: 5px;
+                    input[type="range"] {
+                        -webkit-appearance: none;
+                        width: 100%;
+                        height: 6px;
+                        background: linear-gradient(90deg, rgb(189, 189, 192) 60%, rgb(189, 189, 192) 60%);
+                        border: 1px solid #fff;
+                        border-radius: 3px;
+                        &::-webkit-slider-thumb {
+                            -webkit-appearance: none;
+                            appearance: none;
+                            width: 24px;
+                            height: 24px;
+                            background-color: #3e9cdc;
+                            border: 3px solid #286690;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+                        &::-moz-range-thumb {
+                            width: 24px;
+                            height: 24px;
+                            background-color: #3e9cdc;
+                            border: 3px solid #286690;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
                     }
                 }
             }
-            &__file {
-                grid-area: file;
-                position: relative;
-                svg {
-                    position: absolute;
-                    top: 14px;
-                    left: 97px;
-                }
-            }
-            &__button {
-                grid-area: button;
-            }
-            & > div > select, input, label, button {
+            &__uploadLabel {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 width: 370px;
                 height: 48px;
-                border: 1px solid #fff;
-                border-radius: 3px;
-                background-color: rgba(255, 255, 255, 0.85);
-                font-size: 18px;
-                line-height: calc(22 / 18 * 100%);
-                color: #272733;
-                padding: 12px 10px;
-            }
-            & > div > input[type="text"] {}
-            & > div > input[type="file"] {
-                display: none;
-            }
-            & > div > label {
-                display: block;
                 background-color: #fff;
                 border: 2px solid #3e9cdc;
-                cursor: pointer;
-                text-transform: uppercase;
-                font-size: 15px;
+                border-radius: 3px;
                 font-weight: 700;
+                font-size: 15px;
                 line-height: calc(18 / 15 * 100%);
+                color: #272733;
+                text-transform: uppercase;
                 text-align: center;
-                padding-left: 40px;
+                padding: 12px 0;
+                cursor: pointer;
+                svg {
+                    margin-right: 10px;
+                }
             }
-            & > div > button {
+            &__uploadInput {
+                display: none;
+            }
+            &__button {
+                width: 370px;
+                height: 48px;
                 background-color: #3e9cdc;
+                border: 1px solid #fff;
                 border-radius: 4px;
-                font-size: 15px;
                 font-weight: 700;
+                font-size: 15px;
                 line-height: calc(18 / 15 * 100%);
-                color: #fff;
                 text-transform: uppercase;
+                color: #fff;
             }
         }
+        // ---------------------------------------------------------- ФОРМА
     }
 }
 // ---------------------------------------------------------------------------------- footer
