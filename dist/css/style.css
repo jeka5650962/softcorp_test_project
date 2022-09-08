@@ -334,6 +334,7 @@ body {
 }
 .page .order .form__item {
   padding: 0 15px;
+  position: relative;
 }
 .page .order .form__item:not(:last-child) {
   margin-bottom: 30px;
@@ -368,6 +369,26 @@ body {
   font-size: 18px;
   line-height: 122.2222222222%;
   color: #272733;
+  transition: 0.3s;
+}
+.page .order .form__item input[type=text]:focus {
+  background-color: #fff;
+  border: 1px solid #3e9cdc;
+  box-shadow: rgba(35, 139, 255, 0.7) 0 0 0 3px;
+}
+.page .order .form__item input[type=text]:focus ~ label, .page .order .form__item input[type=text]:not(:placeholder-shown) ~ label {
+  top: -25px;
+  font-size: 16px;
+  color: #3e9cdc;
+}
+.page .order .form__label {
+  position: absolute;
+  top: 13px;
+  left: 26px;
+  transition: 0.3s;
+  font-size: 18px;
+  line-height: 122.2222222222%;
+  color: #7a7a7a;
 }
 .page .order .form .range {
   display: flex;

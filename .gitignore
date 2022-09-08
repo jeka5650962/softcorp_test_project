@@ -1,5 +1,6 @@
 # dependencies
-node_modules/
+/node_modules
 
 # other
-.idea/
+/.idea
+/gulp/version.json

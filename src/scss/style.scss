@@ -269,6 +269,7 @@ body {
             margin: 0 -15px;
             &__item {
                 padding: 0 15px;
+                position: relative;
                 &:not(:last-child) {
                     margin-bottom: 30px;
                 }
@@ -302,7 +303,28 @@ body {
                     font-size: 18px;
                     line-height: calc(22 / 18 * 100%);
                     color: #272733;
+                    transition: .3s;
                 }
+                input[type="text"]:focus {
+                    background-color: #fff;
+                    border: 1px solid #3e9cdc;
+                    box-shadow: rgba(35, 139, 255, 0.7) 0 0 0 3px;
+                }
+                input[type="text"]:focus ~ label, input[type="text"]:not(:placeholder-shown) ~ label {
+                    top: -25px;
+                    font-size: 16px;
+                    color: #3e9cdc;
+                }
+            }
+            &__input {}
+            &__label {
+                position: absolute;
+                top: 13px;
+                left: 26px;
+                transition: .3s;
+                font-size: 18px;
+                line-height: calc(22 / 18 * 100%);
+                color: #7a7a7a;
             }
             &__range {}
             .range {
