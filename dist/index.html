@@ -133,7 +133,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- --------------------------------- ФОРМА --------------------------------- -->
                     <form action="#" id="form" class="order__form form">
                         <div class="form__item">
                             <label for="formSelect"></label>
@@ -146,33 +145,23 @@
                                 <option value="itaque">Itaque earum rerum</option>
                             </select>
                         </div>
-                        <!-- ------------------------------ email -->
                         <div class="form__item">
-                            <input id="formEmail" type="text" name="email" placeholder=" " class="form__input">
-                            <label for="formEmail" class="form__label">Ваш e-mail</label>
-                        </div>
-                        <!-- ------------------------------ name -->
-                        <div class="form__item">
-                            <input id="formName" type="text" name="name" placeholder=" " class="form__input">
-                            <label for="formName" class="form__label">Ваше имя</label>
+                            <input id="formEmail" type="text" name="email" placeholder=" " class="form__input _req _email">
+                            <label for="formEmail" class="form__label">Ваш e-mail *</label>
                         </div>
                         <div class="form__item">
-                            <!-- ------------------------------ range -->
+                            <input id="formName" type="text" name="name" placeholder=" " class="form__input _req">
+                            <label for="formName" class="form__label">Ваше имя *</label>
+                        </div>
+                        <div class="form__item">
                             <div class="form__range range">
                                 <div class="range__description">Sed ut perspiciatis, unde omnis iste natus</div>
                                 <div class="range__value"><span id="rangeValue"></span>%</div>
                                 <div class="range__line">
                                     <label for="myRange"></label>
-                                    <input
-                                            type="range"
-                                            min="0"
-                                            max="100"
-                                            value="0"
-                                            id="myRange"
-                                    >
+                                    <input type="range" min="0" max="100" value="0" id="myRange">
                                 </div>
                             </div>
-                            <!-- ------------------------------ range -->
                         </div>
                         <div class="form__item">
                             <label for="formImage" class="form__uploadLabel">
@@ -183,12 +172,12 @@
                                 <span>Прикрепить файл</span>
                             </label>
                             <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="form__uploadInput">
+                            <div id="uploadPreview" class="form__uploadPreview"></div>
                         </div>
                         <div class="form__item">
                             <button type="submit" class="form__button">Отправить</button>
                         </div>
                     </form>
-                    <!-- --------------------------------- ФОРМА --------------------------------- -->
                 </div>
             </div>
             <div class="order__image _ibg">
@@ -248,21 +237,6 @@
     </div>
 </footer>
 </div>
-<script type="text/javascript">
-    let slider = document.getElementById("myRange");
-    let output = document.getElementById("rangeValue");
-
-    output.innerHTML = slider.value;
-
-    slider.oninput = function () {
-        output.innerHTML = this.value;
-    }
-
-    slider.addEventListener("mousemove", function () {
-        let x = slider.value;
-        slider.style.background = 'linear-gradient(90deg, rgb(62, 156, 220) ' + x + '%, rgb(189, 189, 192) ' + x + '%)';
-    })
-</script>
-<!--<script src="js/app.min.js"></script>-->
+<script src="js/app.min.js"></script>
 </body>
 </html>
