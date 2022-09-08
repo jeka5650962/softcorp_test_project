@@ -378,7 +378,7 @@ body {
 }
 .page .order .form__item input[type=text]:focus ~ label, .page .order .form__item input[type=text]:not(:placeholder-shown) ~ label {
   top: -25px;
-  font-size: 16px;
+  font-size: 14px;
   color: #3e9cdc;
 }
 .page .order .form__label {
@@ -456,6 +456,20 @@ body {
   text-align: center;
   padding: 12px 0;
   cursor: pointer;
+  transition: 0.3s;
+}
+.page .order .form__uploadLabel svg > path, .page .order .form__uploadLabel span {
+  transition: 0.3s;
+}
+.page .order .form__uploadLabel:hover {
+  box-shadow: rgba(35, 139, 255, 0.7) 0 0 0 3px;
+  border: 2px solid #fff;
+}
+.page .order .form__uploadLabel:hover span {
+  color: #3e9cdc;
+}
+.page .order .form__uploadLabel:hover svg path {
+  fill: #3e9cdc;
 }
 .page .order .form__uploadLabel svg {
   margin-right: 10px;
@@ -474,6 +488,12 @@ body {
   line-height: 120%;
   text-transform: uppercase;
   color: #fff;
+  transition: 0.3s;
+}
+.page .order .form__button:hover {
+  scale: 1.05;
+  background-color: #286690;
+  box-shadow: rgba(35, 139, 255, 0.7) 0 0 0 3px;
 }
 
 .footer {
@@ -519,8 +539,13 @@ body {
   display: flex;
   justify-content: flex-end;
 }
+.footer .contacts a:hover span {
+  color: #3e9cdc;
+}
 .footer .contacts span {
   margin: 0 0 0 20px;
+  color: #fff;
+  transition: 0.3s;
 }
 .footer .contacts__mail {
   display: flex;

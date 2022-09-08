@@ -312,7 +312,7 @@ body {
                 }
                 input[type="text"]:focus ~ label, input[type="text"]:not(:placeholder-shown) ~ label {
                     top: -25px;
-                    font-size: 16px;
+                    font-size: 14px;
                     color: #3e9cdc;
                 }
             }
@@ -393,6 +393,22 @@ body {
                 text-align: center;
                 padding: 12px 0;
                 cursor: pointer;
+                transition: .3s;
+                svg > path, span {
+                    transition: .3s;
+                }
+                &:hover {
+                    box-shadow: rgba(35, 139, 255, 0.7) 0 0 0 3px;
+                    border: 2px solid #fff;
+                    & span {
+                        color: #3e9cdc;
+                    }
+                    & svg {
+                        path {
+                            fill: #3e9cdc;
+                        }
+                    }
+                }
                 svg {
                     margin-right: 10px;
                 }
@@ -411,6 +427,12 @@ body {
                 line-height: calc(18 / 15 * 100%);
                 text-transform: uppercase;
                 color: #fff;
+                transition: .3s;
+                &:hover {
+                    scale: 1.05;
+                    background-color: #286690;
+                    box-shadow: rgba(35, 139, 255, 0.7) 0 0 0 3px;
+                }
             }
         }
         // ---------------------------------------------------------- ФОРМА
@@ -458,8 +480,15 @@ body {
         flex: 0 0 29.7%;
         display: flex;
         justify-content: flex-end;
+        a:hover {
+            span {
+                color: #3e9cdc;
+            }
+        }
         span {
             margin: 0 0 0 20px;
+            color: #fff;
+            transition: .3s;
         }
         &__mail {
             display: flex;
