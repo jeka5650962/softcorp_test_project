@@ -401,6 +401,7 @@ body {
 .page .order .form__select {
   width: 100%;
   position: relative;
+  z-index: 100;
 }
 .page .order .form__select.open .form__dropdown {
   display: block;
@@ -416,10 +417,23 @@ body {
   border-bottom-right-radius: 0;
 }
 .page .order .form__select.open .form__input svg {
-  rotate: 0deg;
+  rotate: 180deg;
 }
 .page .order .form__select.open .form__input svg path {
   fill: #fff;
+}
+.page .order .form__select.open .form__backdrop {
+  display: block;
+}
+.page .order .form__backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: -1;
+  display: none;
 }
 .page .order .form__input {
   width: 100%;
@@ -434,13 +448,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
-}
-.page .order .form__input svg {
-  rotate: 180deg;
-}
-.page .order .form__input svg path {
-  fill: #000;
 }
 .page .order .form__dropdown {
   display: none;
@@ -460,6 +467,9 @@ body {
   line-height: 188.8888888889%;
   color: #fff;
   padding: 0 10px;
+}
+.page .order .form .dropdown__item.selected {
+  color: #3e9cdc;
 }
 .page .order .form .dropdown__item:hover {
   cursor: pointer;

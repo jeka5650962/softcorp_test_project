@@ -338,6 +338,7 @@ $height: 48px;
             &__select {
                 width: 100%;
                 position: relative;
+                z-index: 100;
                 &.open {
                     .form__dropdown {
                         display: block;
@@ -352,13 +353,26 @@ $height: 48px;
                         border-bottom-left-radius: 0;
                         border-bottom-right-radius: 0;
                         svg {
-                            rotate: 0deg;
+                            rotate: 180deg;
                             path {
                                 fill: #fff;
                             }
                         }
                     }
+                    .form__backdrop {
+                        display: block;
+                    }
                 }
+            }
+            &__backdrop {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                background: transparent;
+                z-index: -1;
+                display: none;
             }
             &__input {
                 width: 100%;
@@ -373,13 +387,6 @@ $height: 48px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                cursor: pointer;
-                svg {
-                    rotate: 180deg;
-                    path {
-                        fill: #000;
-                    }
-                }
             }
             &__dropdown {
                 display: none;
@@ -401,6 +408,9 @@ $height: 48px;
                     line-height: calc(34 / 18 * 100%);
                     color: #fff;
                     padding: 0 10px;
+                    &.selected {
+                        color: #3e9cdc;
+                    }
                     &:hover {
                         cursor: pointer;
                         //color: #3e9cdc;
