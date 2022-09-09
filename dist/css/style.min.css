@@ -377,7 +377,7 @@ body {
   justify-content: center;
 }
 .page .order .form__item input[type=text], .page .order .form__item select {
-  width: 370px;
+  width: 100%;
   height: 48px;
   background-color: rgba(255, 255, 255, 0.85);
   border: 1px solid #fff;
@@ -397,6 +397,74 @@ body {
   top: -25px;
   font-size: 14px;
   color: #3e9cdc;
+}
+.page .order .form__select {
+  width: 100%;
+  position: relative;
+}
+.page .order .form__select.open .form__dropdown {
+  display: block;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+}
+.page .order .form__select.open .form__input {
+  background-color: #3a3c4c;
+  border: none;
+  color: #fff;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.page .order .form__select.open .form__input svg {
+  rotate: 0deg;
+}
+.page .order .form__select.open .form__input svg path {
+  fill: #fff;
+}
+.page .order .form__input {
+  width: 100%;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-size: 18px;
+  line-height: 122.2222222222%;
+  color: #272733;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.page .order .form__input svg {
+  rotate: 180deg;
+}
+.page .order .form__input svg path {
+  fill: #000;
+}
+.page .order .form__dropdown {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 48px;
+  left: 0;
+  right: 0;
+  max-height: 180px;
+  overflow-y: auto;
+  background-color: #272733;
+  border: 1px solid #3a3c4c;
+  border-radius: 3px;
+}
+.page .order .form .dropdown__item {
+  font-size: 18px;
+  line-height: 188.8888888889%;
+  color: #fff;
+  padding: 0 10px;
+}
+.page .order .form .dropdown__item:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: 0.15s background-color ease-in;
 }
 .page .order .form__input._error {
   box-shadow: 0 0 15px red;
@@ -463,7 +531,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 370px;
+  width: 100%;
   height: 48px;
   background-color: #fff;
   border: 2px solid #3e9cdc;
