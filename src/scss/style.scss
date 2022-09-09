@@ -17,6 +17,8 @@ body {
     min-height: 100%;
 }
 $height: 48px;
+// ---------------------------------------------------------------------------------- scrollbar
+
 // ---------------------------------------------------------------------------------- ограничивающий контейнер
 [class*="__container"] {
     max-width: 1170px;
@@ -402,6 +404,18 @@ $height: 48px;
                 border-radius: 3px;
             }
             .dropdown {
+                &::-webkit-scrollbar {
+                    width: 7px;
+                    &-track {
+                        background: #3a3c4c;
+                        border-radius: 3px;
+                        margin-block: 3px;
+                    }
+                    &-thumb {
+                        background: #3e9cdc;
+                        border-radius: 3px;
+                    }
+                }
                 &__list {}
                 &__item {
                     font-size: 18px;

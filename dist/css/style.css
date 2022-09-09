@@ -462,6 +462,18 @@ body {
   border: 1px solid #3a3c4c;
   border-radius: 3px;
 }
+.page .order .form .dropdown::-webkit-scrollbar {
+  width: 7px;
+}
+.page .order .form .dropdown::-webkit-scrollbar-track {
+  background: #3a3c4c;
+  border-radius: 3px;
+  margin-block: 3px;
+}
+.page .order .form .dropdown::-webkit-scrollbar-thumb {
+  background: #3e9cdc;
+  border-radius: 3px;
+}
 .page .order .form .dropdown__item {
   font-size: 18px;
   line-height: 188.8888888889%;
