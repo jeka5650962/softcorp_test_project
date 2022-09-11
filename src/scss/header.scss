@@ -1,0 +1,187 @@
+$maxWidth: 1920;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $addMobSize: $addSize + $addSize * 0.7;
+    @media (max-width: 767px) {
+        font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+    }
+    @media (min-width: 767px) {
+        font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+    }
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(16, 16, 29, 0.9);
+        z-index: 2;
+    }
+
+    &__container {
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        position: relative;
+    }
+
+    &__logo {
+        font-family: 'Raleway', sans-serif;
+        @include adaptiv-font(28, 26);
+        font-weight: 800;
+        line-height: calc(33 / 28 * 100%);
+        color: #fff;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 3;
+
+        span {
+            color: #3e9cdc;
+        }
+    }
+
+    &__burger {
+        display: none;
+
+        span {
+        }
+    }
+
+    .menu {
+        &__list {
+            display: flex;
+            position: relative;
+            z-index: 2;
+        }
+
+        &__item {
+            margin: 0 0 0 60px;
+        }
+
+        &__link {
+            @include adaptiv-font(13, 13);
+            line-height: calc(16 / 13 * 100%);
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            transition: all 0.3s ease 0s;
+
+            &.active {
+                color: #3e9cdc;
+            }
+
+            &:hover {
+                color: #3e9cdc;
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    body.lock {
+        overflow: hidden;
+    }
+    .header {
+        &__burger {
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 20px;
+            z-index: 3;
+
+            span {
+                position: absolute;
+                background-color: #fff;
+                top: 9px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                transition: all .3s ease 0s;
+            }
+
+            &::before, &::after {
+                content: '';
+                background-color: #fff;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                transition: all .3s ease 0s;
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+
+            &.active {
+                &::before {
+                    transform: rotate(45deg);
+                    top: 9px;
+                }
+
+                &::after {
+                    transform: rotate(-45deg);
+                    bottom: 9px;
+                }
+
+                span {
+                    transform: scale(0);
+                }
+            }
+        }
+
+        &__menu {
+            display: block;
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(16, 16, 29, 0.97);
+            padding: 100px 15px 0 15px;
+            overflow: auto;
+
+            &.active {
+                top: 0;
+                transition: all .3s ease 0s;
+            }
+        }
+
+        &__body {
+            height: 70px;
+        }
+
+        .menu {
+            &__list {
+                display: block;
+            }
+
+            &__item {
+                margin: 0 0 20px 0;
+            }
+
+            &__link {
+                @include adaptiv-font(22, 22);
+            }
+        }
+    }
+}
