@@ -56,6 +56,7 @@ $height: 48px;
         width: 100%;
         height: 100%;
         background-color: rgba(16, 16, 29, 0.9);
+        z-index: 2;
     }
 
     &__container {
@@ -67,7 +68,6 @@ $height: 48px;
         align-items: center;
         height: 100px;
         position: relative;
-        z-index: 2;
     }
 
     &__logo {
@@ -77,6 +77,8 @@ $height: 48px;
         line-height: calc(33 / 28 * 100%);
         color: #fff;
         text-transform: uppercase;
+        position: relative;
+        z-index: 3;
 
         span {
             color: #3e9cdc;
@@ -91,21 +93,14 @@ $height: 48px;
     }
 
     .menu {
-        display: flex;
-        justify-content: flex-end;
-
         &__list {
             display: flex;
-            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
         }
 
         &__item {
-            &:not(:first-child) {
-                margin: 0 0 0 60px;
-                @media (max-width: 900px) {
-                    margin: 0 0 0 40px;
-                }
-            }
+            margin: 0 0 0 60px;
         }
 
         &__link {
@@ -128,19 +123,94 @@ $height: 48px;
 }
 
 @media (max-width: 767px) {
+    body.lock {
+        overflow: hidden;
+    }
     .header {
         &__burger {
             display: block;
             position: relative;
             width: 30px;
             height: 20px;
+            z-index: 3;
+
+            span {
+                position: absolute;
+                background-color: #fff;
+                top: 9px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                transition: all .3s ease 0s;
+            }
 
             &::before, &::after {
                 content: '';
                 background-color: #fff;
                 position: absolute;
+                left: 0;
                 width: 100%;
                 height: 2px;
+                transition: all .3s ease 0s;
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+
+            &.active {
+                &::before {
+                    transform: rotate(45deg);
+                    top: 9px;
+                }
+
+                &::after {
+                    transform: rotate(-45deg);
+                    bottom: 9px;
+                }
+
+                span {
+                    transform: scale(0);
+                }
+            }
+        }
+
+        &__menu {
+            display: block;
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(16, 16, 29, 0.97);
+            padding: 100px 15px 0 15px;
+            overflow: auto;
+
+            &.active {
+                top: 0;
+                transition: all .3s ease 0s;
+            }
+        }
+
+        &__body {
+            height: 70px;
+        }
+
+        .menu {
+            &__list {
+                display: block;
+            }
+
+            &__item {
+                margin: 0 0 20px 0;
+            }
+
+            &__link {
+                font-size: 24px;
             }
         }
     }
