@@ -134,7 +134,7 @@ body {
 .header__logo {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
-  line-height: 117.8571428571%;
+  line-height: 117.86%;
   color: #fff;
   text-transform: uppercase;
   position: relative;
@@ -171,7 +171,7 @@ body {
   }
 }
 .header .menu__link {
-  line-height: 123.0769230769%;
+  line-height: 123.08%;
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
@@ -298,7 +298,7 @@ body {
   }
 }
 .page .main-block__title {
-  line-height: 58px;
+  line-height: 120.83%;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -316,7 +316,7 @@ body {
   color: #3e9cdc;
 }
 .page .main-block .text {
-  line-height: 24px;
+  line-height: 120%;
   margin: 90px 0 78px 0;
 }
 @media (max-width: 767px) {
@@ -426,11 +426,17 @@ body {
 .page .order__body {
   position: relative;
   z-index: 2;
+  margin: 0 -15px;
+}
+@media (max-width: 1250px) {
+  .page .order__body {
+    margin: 0;
+  }
 }
 .page .order__title {
   color: #fff;
   text-transform: uppercase;
-  line-height: 43px;
+  line-height: 119.44%;
   font-weight: 700;
   margin: 0 0 30px 0;
   text-align: center;
@@ -451,7 +457,7 @@ body {
 }
 .page .order__subtitle {
   color: #bbb;
-  line-height: 22px;
+  line-height: 122.22%;
   margin: 0 0 80px 0;
   text-align: center;
   padding: 0 15px;
@@ -520,7 +526,7 @@ body {
 .page .order .steps__item span {
   text-align: center;
   min-width: 190px;
-  line-height: 19px;
+  line-height: 118.75%;
   color: #fff;
   position: absolute;
   top: 116px;
@@ -538,7 +544,7 @@ body {
 .page .order__form {
   flex: 1 1 auto;
   position: relative;
-  padding-top: 144px;
+  padding: 145px 0 0 0;
 }
 .page .order__form::after {
   content: "";
@@ -559,7 +565,6 @@ body {
 .page .order .form {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -15px;
 }
 @media (max-width: 1044px) {
   .page .order .form {
@@ -724,7 +729,7 @@ body {
   border-radius: 3px;
 }
 .page .order .form .dropdown__item {
-  line-height: 34px;
+  line-height: 188.89%;
   color: #fff;
   padding: 0 10px;
 }
@@ -772,7 +777,7 @@ body {
 }
 .page .order .form .range__description {
   flex: 0 1 80%;
-  line-height: 22px;
+  line-height: 122.22%;
   color: #fff;
 }
 @media (max-width: 767px) {
@@ -789,7 +794,7 @@ body {
   flex: 0 1 20%;
   display: flex;
   justify-content: flex-end;
-  line-height: 22px;
+  line-height: 122.22%;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.85);
 }
@@ -899,7 +904,7 @@ body {
   text-transform: uppercase;
   color: #fff;
   transition: 0.3s;
-  margin-top: 25px;
+  margin-top: 26px;
 }
 @media (max-width: 767px) {
   .page .order .form__button {
@@ -933,7 +938,7 @@ body {
   flex-wrap: wrap;
   min-height: 80px;
   align-items: center;
-  line-height: 16px;
+  line-height: 123.08%;
   color: #fff;
 }
 @media (max-width: 767px) {

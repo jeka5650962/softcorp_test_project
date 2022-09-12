@@ -73,7 +73,7 @@ $maxWidth: 1920;
 
         &__title {
             @include adaptiv-font(48, 28);
-            line-height: 58px;
+            line-height: 120.83%;
             font-weight: 700;
             text-transform: uppercase;
 
@@ -84,7 +84,7 @@ $maxWidth: 1920;
 
         .text {
             @include adaptiv-font(20, 18);
-            line-height: 24px;
+            line-height: 120%;
             margin: 90px 0 78px 0;
             @media (max-width: 991.98px) {
                 margin: 50px 0;
@@ -185,13 +185,17 @@ $maxWidth: 1920;
         &__body {
             position: relative;
             z-index: 2;
+            margin: 0 -15px;
+            @media (max-width: 1250px) {
+                margin: 0;
+            }
         }
 
         &__title {
             color: #fff;
             text-transform: uppercase;
             @include adaptiv-font(36, 28);
-            line-height: 43px;
+            line-height: 119.44%;
             font-weight: 700;
             margin: 0 0 30px 0;
             text-align: center;
@@ -205,7 +209,7 @@ $maxWidth: 1920;
         &__subtitle {
             color: #bbb;
             @include adaptiv-font(18, 16);
-            line-height: 22px;
+            line-height: 122.22%;
             margin: 0 0 80px 0;
             text-align: center;
             padding: 0 15px;
@@ -224,6 +228,7 @@ $maxWidth: 1920;
                 position: relative;
                 z-index: 2;
                 display: grid;
+                //grid-template-columns: repeat(5, 1fr);
                 grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));
                 row-gap: 70px;
                 justify-items: center;
@@ -267,7 +272,7 @@ $maxWidth: 1920;
                     text-align: center;
                     min-width: 190px;
                     @include adaptiv-font(16, 16);
-                    line-height: 19px;
+                    line-height: 118.75%;
                     color: #fff;
                     position: absolute;
                     top: 116px;
@@ -278,7 +283,7 @@ $maxWidth: 1920;
         &__form {
             flex: 1 1 auto;
             position: relative;
-            padding-top: 144px;
+            padding: 145px 0 0 0;
 
             &::after {
                 content: '';
@@ -302,7 +307,6 @@ $maxWidth: 1920;
         .form {
             display: flex;
             flex-wrap: wrap;
-            margin: 0 -15px;
             @media (max-width: 1044px) {
                 display: block;
                 max-width: 700px;
@@ -463,7 +467,7 @@ $maxWidth: 1920;
 
                 &__item {
                     @include adaptiv-font(18, 18);
-                    line-height: 34px;
+                    line-height: 188.89%;
                     color: #fff;
                     padding: 0 10px;
 
@@ -499,7 +503,7 @@ $maxWidth: 1920;
                 &__description {
                     flex: 0 1 80%;
                     @include adaptiv-font(18, 18);
-                    line-height: 22px;
+                    line-height: 122.22%;
                     color: #fff;
                 }
 
@@ -508,7 +512,7 @@ $maxWidth: 1920;
                     display: flex;
                     justify-content: flex-end;
                     @include adaptiv-font(18, 18);
-                    line-height: 22px;
+                    line-height: 122.22%;
                     font-weight: 700;
                     color: rgba(255, 255, 255, 0.85);
                 }
@@ -617,7 +621,7 @@ $maxWidth: 1920;
                 text-transform: uppercase;
                 color: #fff;
                 transition: .3s;
-                margin-top: 25px;
+                margin-top: 26px;
                 @media (max-width: 1044px) {
                     width: 100%;
                 }

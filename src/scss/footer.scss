@@ -22,7 +22,7 @@ $maxWidth: 1920;
         min-height: 80px;
         align-items: center;
         @include adaptiv-font(13, 13);
-        line-height: 16px;
+        line-height: 123.08%;
         color: #fff;
         @media (max-width: 1044px) {
             flex-direction: column;

@@ -40,7 +40,7 @@ $maxWidth: 1920;
         font-family: 'Raleway', sans-serif;
         @include adaptiv-font(28, 26);
         font-weight: 800;
-        line-height: calc(33 / 28 * 100%);
+        line-height: 117.86%;
         color: #fff;
         text-transform: uppercase;
         position: relative;
@@ -72,7 +72,7 @@ $maxWidth: 1920;
 
         &__link {
             @include adaptiv-font(13, 13);
-            line-height: calc(16 / 13 * 100%);
+            line-height: 123.08%;
             font-weight: 700;
             color: #fff;
             text-transform: uppercase;
