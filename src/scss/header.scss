@@ -1,5 +1,4 @@
 $maxWidth: 1920;
-
 @mixin adaptiv-font($pcSize, $mobSize) {
     $addSize: $pcSize - $mobSize;
     $addMobSize: $addSize + $addSize * 0.7;
@@ -29,9 +28,6 @@ $maxWidth: 1920;
         z-index: 2;
     }
 
-    &__container {
-    }
-
     &__body {
         display: flex;
         justify-content: space-between;
@@ -57,9 +53,6 @@ $maxWidth: 1920;
 
     &__burger {
         display: none;
-
-        span {
-        }
     }
 
     .menu {
@@ -67,10 +60,14 @@ $maxWidth: 1920;
             display: flex;
             position: relative;
             z-index: 2;
+            flex-wrap: wrap;
         }
 
         &__item {
             margin: 0 0 0 60px;
+            @media (max-width: 820px) {
+                margin: 0 0 0 40px;
+            }
         }
 
         &__link {

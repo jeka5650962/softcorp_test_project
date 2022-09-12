@@ -1,5 +1,4 @@
 $maxWidth: 1920;
-
 @mixin adaptiv-font($pcSize, $mobSize) {
     $addSize: $pcSize - $mobSize;
     $addMobSize: $addSize + $addSize * 0.7;
@@ -19,14 +18,24 @@ $maxWidth: 1920;
     &__container {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         min-height: 80px;
         align-items: center;
         @include adaptiv-font(13, 13);
+        line-height: 16px;
         color: #fff;
+        @media (max-width: 1044px) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px 15px;
+        }
     }
 
     &__copyright {
         flex: 0 0 29.7%;
+        @media (max-width: 1044px) {
+            order: 3;
+        }
     }
 
     .payments {
@@ -35,24 +44,26 @@ $maxWidth: 1920;
         justify-content: space-evenly;
         border-left: 1px solid #c3c3c3;
         border-right: 1px solid #c3c3c3;
+        @media (max-width: 1044px) {
+            border: none;
+            order: 2;
+        }
 
         span {
             margin: 0 0 0 10px;
+            color: #c3c3c3;
         }
 
-        &__qiwi {
+        &__item {
             display: flex;
             align-items: center;
-        }
-
-        &__yandex {
-            display: flex;
-            align-items: center;
-        }
-
-        &__webmoney {
-            display: flex;
-            align-items: center;
+            @media (max-width: 1044px) {
+                padding: 25px 0;
+                margin-right: 20px;
+                &:last-child {
+                    margin: 0;
+                }
+            }
         }
     }
 
@@ -71,6 +82,9 @@ $maxWidth: 1920;
             margin: 0 0 0 20px;
             color: #fff;
             transition: .3s;
+            @media (max-width: 1160px) {
+                margin: 0 0 0 10px;
+            }
         }
 
         &__mail {
