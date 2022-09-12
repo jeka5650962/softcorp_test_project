@@ -2,12 +2,14 @@ import * as myFunctions from "./modules/functions.js";
 import * as myRangeSlider from "./modules/rangeslider.js";
 import * as myForm from "./modules/form.js";
 import * as myBurger from "./modules/burger.js";
+import * as myAnchor from "./modules/anchors.js";
 import {Select} from "./modules/select/select.js";
 
 myFunctions.isWebp();
 myRangeSlider.rangeSlider();
 myForm.form();
 myBurger.onBurger();
+myAnchor.onAnchor();
 
 import Swiper, {Navigation, Pagination} from 'swiper';
 
