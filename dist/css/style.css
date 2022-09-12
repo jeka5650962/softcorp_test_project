@@ -897,10 +897,16 @@ body {
 }
 .page .order .form__uploadPreview {
   display: inline-block;
-  max-width: 100px;
+  max-width: 80px;
   position: absolute;
   top: 70px;
-  left: 15px;
+  right: 15px;
+}
+@media (max-width: 1044px) {
+  .page .order .form__uploadPreview {
+    left: 15px;
+    max-width: 50px;
+  }
 }
 .page .order .form__uploadPreview img {
   max-width: 100%;
@@ -930,6 +936,7 @@ body {
 @media (max-width: 1044px) {
   .page .order .form__button {
     width: 100%;
+    margin-top: 60px;
   }
 }
 .page .order .form__button:hover {
