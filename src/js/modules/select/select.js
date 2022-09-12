@@ -60,6 +60,8 @@ export class Select {
             this.select(id);
         } else if (type === 'backdrop') {
             this.close();
+        } else {
+            this.toggle();
         }
     }
 

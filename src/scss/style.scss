@@ -385,6 +385,7 @@ $maxWidth: 1920;
                 width: 100%;
                 position: relative;
                 z-index: 100;
+                cursor: pointer;
 
                 &.open {
                     .form__dropdown {

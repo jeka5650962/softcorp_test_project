@@ -658,6 +658,7 @@ body {
   width: 100%;
   position: relative;
   z-index: 100;
+  cursor: pointer;
 }
 .page .order .form__select.open .form__dropdown {
   display: block;
