@@ -724,6 +724,7 @@ body {
   border-radius: 3px;
 }
 .page .order .form .dropdown__item {
+  line-height: 34px;
   color: #fff;
   padding: 0 10px;
 }
