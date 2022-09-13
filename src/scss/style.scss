@@ -231,7 +231,6 @@ $maxWidth: 1920;
                 position: relative;
                 z-index: 2;
                 display: grid;
-                //grid-template-columns: repeat(5, 1fr);
                 grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));
                 row-gap: 70px;
                 justify-items: center;
@@ -323,7 +322,7 @@ $maxWidth: 1920;
                 padding: 0 15px;
                 position: relative;
 
-                &:not(:last-child) {
+                &:not(:nth-child(6)) {
                     margin-bottom: 30px;
                     @media (max-width: 991.98px) {
                         margin-bottom: 35px;

@@ -94,7 +94,7 @@ export class Select {
 
         var input = document.createElement("input");
         input.type = "hidden";
-        input.name = "select";
+        input.name = "userSelect";
         input.id = "input-select";
         input.value = this.current.value;
 
