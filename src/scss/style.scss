@@ -350,13 +350,13 @@ $maxWidth: 1920;
                     flex: 0 1 33.333%;
                 }
 
-                &:last-child {
+                &:nth-child(6) {
                     flex: 0 1 100%;
                     display: flex;
                     justify-content: center;
                 }
 
-                input[type="text"], select {
+                input[type="text"], input[type="email"], select {
                     width: 100%;
                     height: $height;
                     background-color: rgba(255, 255, 255, 0.85);
@@ -368,13 +368,14 @@ $maxWidth: 1920;
                     transition: .3s;
                 }
 
-                input[type="text"]:focus {
+                input[type="text"]:focus, input[type="email"]:focus {
                     background-color: #fff;
                     border: 1px solid #3e9cdc;
                     box-shadow: 0 0 15px #3e9cdc;
                 }
 
-                input[type="text"]:focus ~ label, input[type="text"]:not(:placeholder-shown) ~ label {
+                input[type="text"]:focus ~ label, input[type="text"]:not(:placeholder-shown) ~ label,
+                input[type="email"]:focus ~ label, input[type="email"]:not(:placeholder-shown) ~ label {
                     top: -25px;
                     @include adaptiv-font(14, 14);
                     color: #3e9cdc;
@@ -633,6 +634,7 @@ $maxWidth: 1920;
                 color: #fff;
                 transition: .3s;
                 margin-top: 26px;
+                cursor: pointer;
                 @media (max-width: 1044px) {
                     width: 100%;
                     margin-top: 60px;

@@ -114,29 +114,35 @@
                             </div>
                         </div>
                     </div>
+                    <!-- ---------------------------------------------- ФОРМА -->
                     <form action="#" id="form" class="order__form form">
+                        <!-- ---------------------------------------------- SELECT -->
                         <div class="form__item">
                             <div id="select"></div>
                         </div>
+                        <!-- ---------------------------------------------- EMAIL -->
                         <div class="form__item">
-                            <input id="formEmail" type="text" name="userEmail" placeholder=" "
+                            <input id="formEmail" type="email" name="userEmail" placeholder=" "
                                    class="form__input _req _email">
                             <label for="formEmail" class="form__label">Ваш e-mail *</label>
                         </div>
+                        <!-- ---------------------------------------------- TEXT -->
                         <div class="form__item">
                             <input id="formName" type="text" name="userName" placeholder=" " class="form__input _req">
                             <label for="formName" class="form__label">Ваше имя *</label>
                         </div>
+                        <!-- ---------------------------------------------- RANGE -->
                         <div class="form__item">
                             <div class="form__range range">
                                 <div class="range__description">Sed ut perspiciatis, unde omnis iste natus</div>
                                 <div class="range__value"><span id="rangeValue"></span>%</div>
                                 <div class="range__line">
                                     <label for="myRange"></label>
-                                    <input type="range" min="0" max="100" value="0" id="myRange">
+                                    <input type="range" min="0" max="100" value="0" id="myRange" name="userRange">
                                 </div>
                             </div>
                         </div>
+                        <!-- ---------------------------------------------- FILE -->
                         <div class="form__item">
                             <label for="formImage" class="form__uploadLabel">
                                 <svg width="18" height="21" viewBox="0 0 18 21" fill="none"
@@ -146,12 +152,13 @@
                                 </svg>
                                 <span>Прикрепить файл</span>
                             </label>
-                            <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image"
+                            <input id="formImage" accept=".jpg, .png, .gif" type="file" name="userImage"
                                    class="form__uploadInput">
                             <div id="uploadPreview" class="form__uploadPreview"></div>
                         </div>
+                        <!-- ---------------------------------------------- SUBMIT -->
                         <div class="form__item">
-                            <button type="submit" class="form__button">Отправить</button>
+                            <input type="submit" value="Отправить" class="form__button">
                         </div>
                     </form>
                 </div>

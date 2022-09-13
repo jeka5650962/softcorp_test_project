@@ -77,10 +77,28 @@ export class Select {
         this.selectedId = id;
         this.$value.textContent = this.current.value;
 
+        const form = document.getElementById('form');
+
         this.$el.querySelectorAll('[data-type="item"]').forEach(el => {
             el.classList.remove('selected');
         })
-        this.$el.querySelector(`[data-id="${id}"]`).classList.add('selected');
+
+        const oldInputSelect = document.getElementById('input-select');
+
+        if (oldInputSelect != null) {
+            form.removeChild(oldInputSelect);
+        }
+
+        const element = this.$el.querySelector(`[data-id="${id}"]`);
+        element.classList.add('selected');
+
+        var input = document.createElement("input");
+        input.type = "hidden";
+        input.name = "select";
+        input.id = "input-select";
+        input.value = this.current.value;
+
+        form.appendChild(input);
 
         this.options.onSelect ? this.options.onSelect(this.current) : null;
 
